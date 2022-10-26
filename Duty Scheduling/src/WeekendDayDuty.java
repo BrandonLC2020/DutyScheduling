@@ -29,6 +29,30 @@ public class WeekendDayDuty implements DutyDay {
         dayOfTheWeek = date.getDayOfWeek();
     }
 
+    public boolean addPrimaryRA(RA ra) {
+        if (onDutyRAs[0] == null) {
+            onDutyRAs[0] = ra;
+            primaryRA = ra;
+            ra.setTotalWeekendDayDuty(ra.getTotalWeekendDayDuty() + 1);
+            ra.setTotalWeekendDayPrimaryDuty(ra.getTotalWeekendDayPrimaryDuty() + 1);
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public boolean addSecondaryRA(RA ra) {
+        if (onDutyRAs[1] == null) {
+            onDutyRAs[1] = ra;
+            secondaryRA = ra;
+            ra.setTotalWeekendDayDuty(ra.getTotalWeekendDayDuty() + 1);
+            ra.setTotalWeekendDaySecondaryDuty(ra.getTotalWeekendDaySecondaryDuty() + 1);
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     public RA[] getRAsOnDuty() {
         return onDutyRAs;
     }

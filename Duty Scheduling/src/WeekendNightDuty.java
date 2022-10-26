@@ -56,4 +56,34 @@ public class WeekendNightDuty implements DutyDay {
         RA[] secondary = new RA[] {secondaryRA1, secondaryRA2};
         return secondary;
     }
+
+    public boolean addPrimaryRA(RA ra) {
+        if (onDutyRAs[0] == null) {
+            onDutyRAs[0] = ra;
+            primaryRA = ra;
+            ra.setTotalWeekendNightDuty(ra.getTotalWeekendNightDuty() + 1);
+            ra.setTotalWeekendNightPrimaryDuty(ra.getTotalWeekendNightPrimaryDuty() + 1);
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public boolean addSecondaryRA(RA ra) {
+        if (onDutyRAs[1] == null) {
+            onDutyRAs[1] = ra;
+            secondaryRA1 = ra;
+            ra.setTotalWeekendNightDuty(ra.getTotalWeekendNightDuty() + 1);
+            ra.setTotalWeekendNightSecondaryDuty(ra.getTotalWeekendNightSecondaryDuty() + 1);
+            return true;
+        } else if (onDutyRAs[2] == null) {
+            onDutyRAs[2] = ra;
+            secondaryRA2 = ra;
+            ra.setTotalWeekendNightDuty(ra.getTotalWeekendNightDuty() + 1);
+            ra.setTotalWeekendNightSecondaryDuty(ra.getTotalWeekendNightSecondaryDuty() + 1);
+            return true;
+        } else {
+            return false;
+        }
+    }
 }

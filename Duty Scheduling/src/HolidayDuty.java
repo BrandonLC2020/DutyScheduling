@@ -54,12 +54,14 @@ public class HolidayDuty implements DutyDay {
             return false;
         }
 
-        if (onDutyRAs[0] != null) {
+        if (onDutyRAs[0] == null) {
             onDutyRAs[0] = ra;
+            ra1 = ra;
         } else {
             onDutyRAs[1] = ra;
+            ra2 = ra;
         }
-
+        ra.setTotalHolidayDuty(ra.getTotalHolidayDuty() + 1);
         return true;
     }
 

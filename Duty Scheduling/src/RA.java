@@ -36,6 +36,21 @@ public class RA {
         this.weekdayDutyDay = dayOfTheWeek;
     }
 
+    public RA(String name) {
+        this.name = name;
+        this.totalWeekdayDuty = 0;
+        this.totalWeekdayPrimaryDuty = 0;
+        this.totalWeekdaySecondaryDuty = 0;
+
+        this.totalWeekendDayDuty = 0;
+        this.totalWeekendDayPrimaryDuty = 0;
+        this.totalWeekendDaySecondaryDuty = 0;
+
+        this.totalWeekendNightDuty = 0;
+        this.totalWeekendNightPrimaryDuty = 0;
+        this.totalWeekendNightSecondaryDuty = 0;
+    }
+
     public DayOfWeek getWeekdayDutyDay() {
         return weekdayDutyDay;
     }
