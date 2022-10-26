@@ -1,5 +1,9 @@
+import java.time.DayOfWeek;
+
 public class RA {
     private String name;
+
+    private DayOfWeek weekdayDutyDay;
 
     private int totalWeekdayDuty;
     private int totalWeekdayPrimaryDuty;
@@ -15,7 +19,7 @@ public class RA {
 
     private int totalHolidayDuty;
 
-    public RA(String name) {
+    public RA(String name, DayOfWeek dayOfTheWeek) {
         this.name = name;
         this.totalWeekdayDuty = 0;
         this.totalWeekdayPrimaryDuty = 0;
@@ -28,6 +32,12 @@ public class RA {
         this.totalWeekendNightDuty = 0;
         this.totalWeekendNightPrimaryDuty = 0;
         this.totalWeekendNightSecondaryDuty = 0;
+
+        this.weekdayDutyDay = dayOfTheWeek;
+    }
+
+    public DayOfWeek getWeekdayDutyDay() {
+        return weekdayDutyDay;
     }
 
     public int getTotalHolidayDuty() {
@@ -76,6 +86,10 @@ public class RA {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public void setWeekdayDutyDay(DayOfWeek weekdayDutyDay) {
+        this.weekdayDutyDay = weekdayDutyDay;
     }
 
     public void setTotalHolidayDuty(int totalHolidayDuty) {

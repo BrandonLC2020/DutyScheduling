@@ -1,3 +1,5 @@
+import java.time.DayOfWeek;
+import java.time.LocalDate;
 import java.util.Date;
 
 public interface DutyDay {
@@ -5,7 +7,7 @@ public interface DutyDay {
 
     int getNumRAsOnDuty();
 
-    DayOfTheWeek getDayOfTheWeek();
+    DayOfWeek getDayOfWeek();
 
-    Date getDate();
+    LocalDate getDate();
 }
