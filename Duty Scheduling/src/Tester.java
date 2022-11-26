@@ -7,9 +7,9 @@ public class Tester {
         MonthOfDuty january = new MonthOfDuty("January", 2023);
         MonthOfDuty may = new MonthOfDuty("May", 2023);
         RA brandon = new RA("Brandon", DayOfWeek.MONDAY);
-        RA kori = new RA("Kori", DayOfWeek.TUESDAY);
+        RA sanjana = new RA("Sanjana", DayOfWeek.WEDNESDAY);
         may.addRAToDate(LocalDate.of(2023, 5, 13), brandon, false);
-        may.addRAToDate(LocalDate.of(2023, 5, 13), kori, false);
+        may.addRAToDate(LocalDate.of(2023, 5, 13), sanjana, false);
         System.out.println("Done.");
     }
 }
